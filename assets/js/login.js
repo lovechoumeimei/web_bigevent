@@ -1,3 +1,4 @@
+// @ts-nocheck
 $(function() {
     $('#link_reg').on('click', function(e) {
 
@@ -32,6 +33,7 @@ $(function() {
         // 监控注册表单的提交事件
 
     $('#form_reg').submit(function(e) {
+        console.log(123);
         e.preventDefault();
         var data = { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }
         $.post("/api/reguser", data,
@@ -45,6 +47,7 @@ $(function() {
     });
     // 监控登录表单的提交事件
     $('#form_login ').submit(function(e) {
+        // console.log(123);
         e.preventDefault();
         $.ajax({
             url: "/api/login",
