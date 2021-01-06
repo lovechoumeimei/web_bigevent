@@ -6,7 +6,7 @@ $(function() {
         // 定义美化时间过滤器
     template.defaults.imports.dataFormat = function(data) {
             const dt = new Date(data)
-            var y = padZero(dt.getFullYear())
+            var y = dt.getFullYear()
             var m = padZero(dt.getMonth() + 1)
             var d = padZero(dt.getDate())
 
@@ -15,8 +15,6 @@ $(function() {
             var mm = padZero(dt.getMinutes())
             var ss = padZero(dt.getSeconds())
             return y + '-' + m + '-' + d + ' ' + hh + ':' + mm + ':' + ss
-
-
         }
         // 补零函数
     function padZero(n) {
