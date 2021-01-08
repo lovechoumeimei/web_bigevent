@@ -46,7 +46,7 @@ $(function() {
             });
     });
     // 监控登录表单的提交事件
-    $('#form_login ').submit(function(e) {
+    $('#form_login').submit(function(e) {
         // console.log(123);
         e.preventDefault();
         $.ajax({
